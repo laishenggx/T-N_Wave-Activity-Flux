@@ -5,7 +5,7 @@ Python scripts for caculating the `T-N Wave-Activity Flux` derived by `Takaya an
 ## Introduction 
 Takaya and Nakamura generalize the Plumb Wave-Activity Flux(Plumb,1985) so as to be applicable to small-amplitude Quasi-Geostrophic(QG) disturbances, either stationary or migratory, that are superimposed on a zonally varying basic flow, and introduced the `T-N Wave-Activity Flux`('TN01' for short).<br>
 
-TNO1 is of great advantage in climating monitoring and diagnosis.
+TN01 is of great advantage in climate monitoring and diagnosis.
 >TN01 with improved meridional component based on Plumb Wave-Activity Flux is appropriate for analyzing Rossby waves in the zonally asymmetric westerly. And it reflect the evolution of long-waves which the E-P Flux can't.<br>(Shi Chunhua,2017)
 
 ## Formulation
@@ -40,11 +40,21 @@ We modified the GRADS script by Kazuaki Nishii into a Python3 version<br>
 The computation is all based on `numpy`, 5 partial differential terms in the formula are calculated by `numpy.gradient` in the central difference method. <br>
 The library of Data import and Visualization could change in terms of requirements.
 
+#### Data
+Horizontal TN01 caltulation require the datas below:
+* Climatology average background of wind`U_c & V_c` and geopotential`phi_c`.
+* Geopotential in the analysis period`phi`.<br>
+Geopotential anomalies will be used to compute pertubation stream-function`psi_p`: 
+    * `phi_p`=`phi`-`phi_c`
+    * `psi_p`=`phi_p`/`f`<br>
+    
+`f` is the Coriolis parameter: `f`=2\*omega\*sin(`lat`)
+
 ### 3D (Horizontal + Vertical)
 The script for TN01 3-Dimension is under development, it would be released in the coming months.
 
 ## Reliability
-The output figures sample
+The output figures sample(Datas from `ECMWF ERA-Interim`)
 <p align="left">
     <img src="https://github.com/laishenggx/T-N_Wave-Activity-Flux/raw/master/jan1981.png" alt="Sample"  width="400">
 </p>
