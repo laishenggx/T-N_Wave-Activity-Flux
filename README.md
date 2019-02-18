@@ -23,7 +23,6 @@ So the formula of horizontal T-N Wave-Activity Flux could yield as followed:
 </p>
 
 ## Programing
-### Horizontal
 We modified the GRADS script by Kazuaki Nishii into a Python3 version<br>
 (http://www.atmos.rcast.u-tokyo.ac.jp/nishii/programs/index.html)<br>
 
@@ -37,18 +36,23 @@ We modified the GRADS script by Kazuaki Nishii into a Python3 version<br>
     * matplotlib (2.2.0)
     * basemap (1.1.0)
 
-The computation is all based on `numpy`, 5 partial differential terms in the formula are calculated by `numpy.gradient` in the central difference method. <br>
-The library of Data import and Visualization could change in terms of requirements.
+All computations are based on `numpy` arrays, which are very efficient.<br>
+Partial differential terms in the formula are calculated by `numpy.gradient` in the central difference method. <br>
+The library of Data import and Visualization could change in terms of requirements(PyNIO,PyNGL...).
 
-#### Data
+### Horizontal
+#### Data & Process
 Horizontal TN01 caltulation require the datas below:
 * Climatology average background of wind`U_c & V_c` and geopotential`phi_c`.
 * Geopotential in the analysis period`phi`.
 
 Geopotential anomalies will be used to compute pertubation stream-function`psi_p` in Quasi-Geostrophic(QG) assumption: 
 * `psi_p`=(`phi`-`phi_c`)/`f`<br>
-  
 `f` is the Coriolis parameter: `f`=2\*omega\*sin(`lat`)
+
+#### Output
+`px` for longitude direction<br>
+`py` for latitude direction
 
 ### 3D (Horizontal + Vertical)
 The script for TN01 3-Dimension is under development, it would be released in the coming months.
@@ -58,7 +62,7 @@ The output figures sample(Datas from `ECMWF ERA-Interim`)
 <p align="left">
     <img src="https://github.com/laishenggx/T-N_Wave-Activity-Flux/raw/master/jan1981.png" alt="Sample"  width="400">
 </p>
-Results are compatible with the Wave-Activity Flux figures made by JMA-TCC,<br>
+Results are compatible with the Wave-Activity Flux figures(JRA-55) made by JMA-TCC,<br>
 (http://ds.data.jma.go.jp/tcc/tcc/products/clisys/figures/db_hist_pen_tcc.html)<br>
 <p align="left">
     <img src="https://github.com/laishenggx/T-N_Wave-Activity-Flux/raw/master/psnh_mon_hist_waf300_198101.png" alt="Sample"  width="400">
