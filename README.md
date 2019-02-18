@@ -43,11 +43,11 @@ The library of Data import and Visualization could change in terms of requiremen
 #### Data
 Horizontal TN01 caltulation require the datas below:
 * Climatology average background of wind`U_c & V_c` and geopotential`phi_c`.
-* Geopotential in the analysis period`phi`.<br>
-Geopotential anomalies will be used to compute pertubation stream-function`psi_p`: 
-    * `phi_p`=`phi`-`phi_c`
-    * `psi_p`=`phi_p`/`f`<br>
-    
+* Geopotential in the analysis period`phi`.
+
+Geopotential anomalies will be used to compute pertubation stream-function`psi_p` in Quasi-Geostrophic(QG) assumption: 
+* `psi_p`=(`phi`-`phi_c`)/`f`<br>
+  
 `f` is the Coriolis parameter: `f`=2\*omega\*sin(`lat`)
 
 ### 3D (Horizontal + Vertical)
