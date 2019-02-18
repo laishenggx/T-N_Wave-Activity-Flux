@@ -7,7 +7,14 @@ These Python scripts use the TN01 diagnostic formula in Spherical coordinates, w
 The first two terms in Eq.38 are taken into account while computing on the horizontal direction.<br>
 And assuming the wave is stationary ,so the Cu in Eq.38 would be zero.
 ## Reliability
-Results are compatible with the Wave-Activity Flux figures made by JMA-TCC,
+The output figures sample
+<p align="left">
+    <img src="https://github.com/laishenggx/T-N_Wave-Activity-Flux/raw/master/jan1981.png" alt="Sample"  width="400">
+</p>
+Results are compatible with the Wave-Activity Flux figures made by JMA-TCC,<br>
 (http://ds.data.jma.go.jp/tcc/tcc/products/clisys/figures/db_hist_pen_tcc.html)<br>
-and also the programs by Kazuaki Nishii @ University of Tokyo.
+<p align="left">
+    <img src="https://github.com/laishenggx/T-N_Wave-Activity-Flux/raw/master/psnh_mon_hist_waf300_198101.png" alt="Sample"  width="400">
+</p>
+and also the programs by Kazuaki Nishii @ University of Tokyo.<br>
 (http://www.atmos.rcast.u-tokyo.ac.jp/nishii/programs/index.html)
