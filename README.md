@@ -1,10 +1,12 @@
 # T-N Wave-Activity Flux
 Python scripts for caculating the `T-N Wave-Activity Flux` derived by `Takaya and Nakamura (JAS,2001)`.
+* Coder: Lai Sheng @ College of Atmospheric Science, Chengdu University of Information Technology.
+* E-mail: laish12@lzu.edu.cn
 ## Introduction 
 Takaya and Nakamura generalize the Plumb Wave-Activity Flux(Plumb,1985) so as to be applicable to small-amplitude Quasi-Geostrophic(QG) disturbances, either stationary or migratory, that are superimposed on a zonally varying basic flow, and introduced the `T-N Wave-Activity Flux`('TN01' for short).<br>
 
 TNO1 is of great advantage in climating monitoring and diagnosis.
->TN01 with improved meridional component based on Plumb Wave-Activity Flux is appropriate for analyzing Rossby waves in the zonally asymmetric westerly. And it can reflect the evolution of long-waves which the E-P Flux can't.(Shi Chunhua,2017)
+>TN01 with improved meridional component based on Plumb Wave-Activity Flux is appropriate for analyzing Rossby waves in the zonally asymmetric westerly. And it reflect the evolution of long-waves which the E-P Flux can't.<br>(Shi Chunhua,2017)
 
 ## Formulation
 These Python scripts use the TN01 diagnostic formula in Spherical coordinates, <br>
