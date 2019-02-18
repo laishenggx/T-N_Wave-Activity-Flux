@@ -1,11 +1,46 @@
 # T-N Wave-Activity Flux
-Python scripts for caculating the `Wave-Activity Flux` derived by `Takaya and Nakamura (JAS,2001)`.
+Python scripts for caculating the `T-N Wave-Activity Flux` derived by `Takaya and Nakamura (JAS,2001)`.
 ## Introduction 
-Takaya and Nakamura generalize the Plumb Wave-Activity Flux(Plumb,1985) so as to be applicable to small-amplitude Quasi-Geostrophic(QG) disturbances, either stationary or migratory, that are superimposed on a zonally varying basic flow, and introduced the `T-N Wave-Activity Flux`('TN01' for short).
+Takaya and Nakamura generalize the Plumb Wave-Activity Flux(Plumb,1985) so as to be applicable to small-amplitude Quasi-Geostrophic(QG) disturbances, either stationary or migratory, that are superimposed on a zonally varying basic flow, and introduced the `T-N Wave-Activity Flux`('TN01' for short).<br>
+
+TNO1 is of great advantage in climating monitoring and diagnosis.
+>TN01 with improved meridional component based on Plumb Wave-Activity Flux is appropriate for analyzing Rossby waves in the zonally asymmetric westerly. And it can reflect the evolution of long-waves which the E-P Flux can't.(Shi Chunhua,2017)
+
 ## Formulation
-These Python scripts use the TN01 diagnostic formula in Spherical coordinates, which is the Eq.38 of Takaya's paper published in 2001.<br>
+These Python scripts use the TN01 diagnostic formula in Spherical coordinates, <br>
+which is the Eq.38 of Takaya's paper published in 2001:<br>
+<p align="left">
+    <img src="https://github.com/laishenggx/T-N_Wave-Activity-Flux/raw/master/eq38.png" alt="Sample"  width="700">
+</p>
 The first two terms in Eq.38 are taken into account while computing on the horizontal direction.<br>
-And assuming the wave is stationary ,so the Cu in Eq.38 would be zero.
+And assuming the wave is stationary ,so the Cu in Eq.38 would be zero.<br>
+So the formula of horizontal T-N Wave-Activity Flux could yield as followed:
+
+<p align="left">
+    <img src="https://github.com/laishenggx/T-N_Wave-Activity-Flux/raw/master/eq38_hor.png" alt="Sample"  width="700">
+</p>
+
+## Programing
+### Horizontal
+We modified the GRADS script by Kazuaki Nishii into a Python3 version<br>
+(http://www.atmos.rcast.u-tokyo.ac.jp/nishii/programs/index.html)<br>
+
+* Python version
+    * Python 3.6
+* Data import
+    * netCDF4
+* Computation
+    * numpy (1.16.1)
+* Visualization
+    * matplotlib (2.2.0)
+    * basemap (1.1.0)
+
+The computation is all based on `numpy`, 5 partial differential terms in the formula are calculated by `numpy.gradient` in the central difference method. <br>
+The library of Data import and Visualization could change in terms of requirements.
+
+### 3D (Horizontal + Vertical)
+The script for TN01 3-Dimension is under development, it would be released in the coming months.
+
 ## Reliability
 The output figures sample
 <p align="left">
