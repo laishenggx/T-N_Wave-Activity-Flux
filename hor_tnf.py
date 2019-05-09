@@ -82,17 +82,13 @@ m.drawcoastlines(linewidth=0.3,color='gray')
 m.drawparallels(np.arange(0.,81.,20.),linewidth=0.4,color='gray')
 m.drawmeridians(np.arange(0.,360.,60.),linewidth=0.4,color='gray',labels=[True,True,True,True])
 
-my_map = copy(plt.cm.RdBu_r)
-my_map.set_under((18/255, 73/255, 132/255), 1.0)
-my_map.set_over((131/255, 11/255, 37/255), 1.0)
-
-psi_p1,lon1=addcyclic(psi_p,lon)
+psi_p1,lon1=addcyclic(psi_p,lon) #This might raise an error when you use basemap 1.2.0 on python3.7
 lonsn, latsn = np.meshgrid(lon1, lat[0:160])
 x_cyc,y_cyc=m(lonsn,latsn)
 
 #Plot Pertubation stream-function
 lev=np.arange(-24,28,4)
-cf=m.contourf(x_cyc,y_cyc,psi_p1[0:160,:]/1e6,levels=lev,cmap=my_map,extend='both')
+cf=m.contourf(x_cyc,y_cyc,psi_p1[0:160,:]/1e6,levels=lev,cmap='RdBu_r',extend='both')
 c=m.contour(x_cyc,y_cyc,psi_p1[0:160,:]/1e6,colors='black',linewidths=0.5,levels=lev)
 
 #plot T-N Flux vector on a Polar Lambert Azimuthal Projection map
