@@ -59,7 +59,7 @@ The Re-analysis from NCEP/NCAR(NCEP1) is Geopotential Height, Geopotential Heigh
 `py` for latitude direction
 
 ### 3D (Horizontal + Vertical)
-The script for TN01 3-Dimension is under development, it would be released in the coming months.
+The script for TN01 3-Dimension is under development.
 
 ## Reliability
 The output figures sample(Datas from `ECMWF ERA-Interim`)
