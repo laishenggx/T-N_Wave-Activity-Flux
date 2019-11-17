@@ -2,6 +2,7 @@
 Python scripts for caculating the `T-N Wave-Activity Flux` derived by `Takaya and Nakamura (JAS,2001)`.
 * Coder: Lai Sheng @ College of Atmospheric Science, Chengdu University of Information Technology.
 * E-mail: laish12@lzu.edu.cn
+* You can also visit my site for more detail: www.500hpa.cn
 ## Introduction 
 Takaya and Nakamura generalize the Plumb Wave-Activity Flux(Plumb,1985) so as to be applicable to small-amplitude Quasi-Geostrophic(QG) disturbances, either stationary or migratory, that are superimposed on a zonally varying basic flow, and introduced the `T-N Wave-Activity Flux`('TN01' for short).<br>
 
@@ -43,12 +44,15 @@ The library of Data import and Visualization could change in terms of requiremen
 ### Horizontal
 #### Data & Process
 Horizontal TN01 caltulation require the datas below:
-* Climatology average background of wind`U_c & V_c` and geopotential`phi_c`.
-* Geopotential in the analysis period`phi`.
+* Climatology average background of wind`U_c & V_c` and geopotential`pi_c`.
+* Geopotential in the analysis period`pi`.
 
 Geopotential anomalies will be used to compute pertubation stream-function`psi_p` in Quasi-Geostrophic(QG) assumption: 
-* `psi_p`=(`phi`-`phi_c`)/`f`<br>
+* `psi_p`=(`pi`-`pi_c`)/`f`<br>
 `f` is the Coriolis parameter: `f`=2\*omega\*sin(`lat`)
+
+**Input Data is Geopotential, NOT Geopotential Height!!!**
+The Re-analysis from NCEP/NCAR(NCEP1) is Geopotential Height, Geopotential Height multiplied by gravity `g` makes Geopotential.
 
 #### Output
 `px` for longitude direction<br>
