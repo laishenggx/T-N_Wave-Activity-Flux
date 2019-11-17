@@ -2,7 +2,7 @@
 Python scripts for caculating the `T-N Wave-Activity Flux` derived by `Takaya and Nakamura (JAS,2001)`.
 * Coder: Lai Sheng @ College of Atmospheric Science, Chengdu University of Information Technology.
 * E-mail: laish12@lzu.edu.cn
-* You can also visit my site for more detail: www.500hpa.cn
+* You can also visit my site for more detail: http://500hpa.cn/pyinmet/tnflux/
 ## Introduction 
 Takaya and Nakamura generalize the Plumb Wave-Activity Flux(Plumb,1985) so as to be applicable to small-amplitude Quasi-Geostrophic(QG) disturbances, either stationary or migratory, that are superimposed on a zonally varying basic flow, and introduced the `T-N Wave-Activity Flux`('TN01' for short).<br>
 
